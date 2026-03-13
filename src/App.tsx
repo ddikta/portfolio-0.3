@@ -126,10 +126,12 @@ export default function App() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="#projects" 
+                  href="https://docs.google.com/presentation/d/1GkpuplYkwyG8wzE4twAhMzM7ZUcOt36Jle-_uFUiI_o/edit?usp=sharing" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-brand-accent hover:text-white transition-all duration-300 flex items-center gap-2"
                 >
-                  View Projects <ChevronRight className="w-4 h-4" />
+                  View Case Study <ChevronRight className="w-4 h-4" />
                 </a>
                 <div className="flex items-center gap-3 px-4">
                   <a href="https://www.linkedin.com/in/dikta-pradika-99187761/" className="p-2 text-brand-text-dim hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5" /></a>

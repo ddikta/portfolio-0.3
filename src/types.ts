@@ -32,7 +32,7 @@ export const PROJECTS: Project[] = [
     title: 'Sales Territory Effectiveness Analysis',
     description: 'RevoU Final Project: Analyzed sales performance, team regions, and store territories using Google Colab to identify growth opportunities and reduce regional mismatches.',
     tags: ['Python', 'Google Colab', 'Data Analytics', 'Sales Strategy'],
-    link: '#',
+    link: 'https://docs.google.com/presentation/d/1GkpuplYkwyG8wzE4twAhMzM7ZUcOt36Jle-_uFUiI_o/edit?usp=sharing',
     metrics: [
       { label: 'Focus', value: 'Growth' },
       { label: 'Tool', value: 'Colab' }
