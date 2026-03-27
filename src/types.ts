@@ -5,6 +5,7 @@ export interface Project {
   tags: string[];
   link: string;
   metrics?: { label: string; value: string }[];
+  outputs?: string[];
 }
 
 export interface Experience {
@@ -36,6 +37,11 @@ export const PROJECTS: Project[] = [
     metrics: [
       { label: 'Focus', value: 'Growth' },
       { label: 'Tool', value: 'Colab' }
+    ],
+    outputs: [
+      'Redesigned territories to align sales effort with opportunity.',
+      'Aligned incentives with actual sales patterns and contribution.',
+      'Implemented real-time dashboard for proactive territory management.'
     ]
   }
 ];

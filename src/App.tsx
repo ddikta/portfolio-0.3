@@ -60,6 +60,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
       </div>
     )}
 
+    {project.outputs && (
+      <div className="mb-6">
+        <div className="text-xs text-brand-accent uppercase tracking-widest mb-3 font-mono">Key Results</div>
+        <ul className="space-y-2">
+          {project.outputs.map((output, idx) => (
+            <li key={idx} className="text-xs text-brand-text-dim flex gap-2 leading-relaxed">
+              <span className="text-brand-accent mt-1">•</span>
+              {output}
+            </li>
+          ))}
+        </ul>
+      </div>
+    )}
+
     <div className="flex flex-wrap gap-2">
       {project.tags.map(tag => (
         <span 
