@@ -2,10 +2,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
+  keyResults?: string[];
   tags: string[];
   link: string;
   metrics?: { label: string; value: string }[];
-  outputs?: string[];
 }
 
 export interface Experience {
@@ -32,16 +32,45 @@ export const PROJECTS: Project[] = [
     id: '1',
     title: 'Sales Territory Effectiveness Analysis',
     description: 'RevoU Final Project: Analyzed sales performance, team regions, and store territories using Google Colab to identify growth opportunities and reduce regional mismatches.',
+    keyResults: [
+      'Analyzed sales performance and store territories to identify expansion opportunities.',
+      'Developed data-driven strategies to reduce regional mismatches and optimize field team distribution.'
+    ],
     tags: ['Python', 'Google Colab', 'Data Analytics', 'Sales Strategy'],
-    link: 'https://docs.google.com/presentation/d/1GkpuplYkwyG8wzE4twAhMzM7ZUcOt36Jle-_uFUiI_o/edit?usp=sharing',
+    link: '#',
     metrics: [
       { label: 'Focus', value: 'Growth' },
       { label: 'Tool', value: 'Colab' }
+    ]
+  },
+  {
+    id: '2',
+    title: 'Loan Portfolio Risk Analysis & Underwriting Strategy',
+    description: 'Based on RevoU Finance Insight Project: Comprehensive risk profiling and underwriting optimization for loan portfolios.',
+    keyResults: [
+      'Profiled anomaly cohort vs. others: uncovered that low income and distress purposes (87% debt consolidation/credit card) drove defaults more than homeownership or tenure.',
+      'Delivered 4 prioritised recommendations (tighter purpose underwriting, geographic overlays, pricing recalibration, and early-warning monitoring) projected to reduce credit losses by 15-30%'
     ],
-    outputs: [
-      'Redesigned territories to align sales effort with opportunity.',
-      'Aligned incentives with actual sales patterns and contribution.',
-      'Implemented real-time dashboard for proactive territory management.'
+    tags: ['Finance Insight', 'Risk Analysis', 'Python', 'Underwriting', 'Tableau'],
+    link: 'https://docs.google.com/presentation/d/1-3Frusi40N-cd5bP2asgNuM2Cetm0s4AGZnf0aYfab4/edit?usp=sharing',
+    metrics: [
+      { label: 'Credit Loss', value: '-15-30%' },
+      { label: 'Distress PTP', value: '87%' }
+    ]
+  },
+  {
+    id: '3',
+    title: 'Marketing Strategy Optimization: SaaS Company Case',
+    description: 'Based on RevoU Data Exploration Sprint Project: End-to-end marketing analytics and customer segmentation analysis for a B2B SaaS HR platform.',
+    keyResults: [
+      'Conducted segmentation analysis using Python, BigQuery, and Tableau, revealing that enterprise and large-company leads generated significantly higher GMV and ROAS despite lower acquisition volume.',
+      'Produced data-driven recommendations for reallocating budget toward high-intent channels and higher-value customer segments to improve marketing efficiency.'
+    ],
+    tags: ['B2B SaaS', 'Marketing Analytics', 'BigQuery', 'Python', 'Tableau'],
+    link: 'https://docs.google.com/presentation/d/1taoYBW-5LxDIA_GK6F97pS5w0tf7D33_yu_Ptx2MUQ8/edit?usp=sharing',
+    metrics: [
+      { label: 'ROAS Focus', value: 'Enterprise' },
+      { label: 'Database', value: 'BigQuery' }
     ]
   }
 ];

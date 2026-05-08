@@ -45,9 +45,20 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
     <h3 className="text-xl font-semibold mb-2 group-hover:text-brand-accent transition-colors">
       {project.title}
     </h3>
-    <p className="text-brand-text-dim text-sm leading-relaxed mb-6">
+    <p className="text-brand-text-dim text-sm leading-relaxed mb-4">
       {project.description}
     </p>
+
+    {project.keyResults && (
+      <ul className="mb-6 space-y-2">
+        {project.keyResults.map((result, idx) => (
+          <li key={idx} className="text-xs text-brand-text-dim flex gap-2 leading-relaxed">
+            <span className="text-brand-accent mt-1 w-1 h-1 rounded-full shrink-0 bg-brand-accent" />
+            {result}
+          </li>
+        ))}
+      </ul>
+    )}
 
     {project.metrics && (
       <div className="grid grid-cols-2 gap-4 mb-6">
@@ -57,20 +68,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => (
             <div className="text-lg font-mono font-medium">{metric.value}</div>
           </div>
         ))}
-      </div>
-    )}
-
-    {project.outputs && (
-      <div className="mb-6">
-        <div className="text-xs text-brand-accent uppercase tracking-widest mb-3 font-mono">Key Results</div>
-        <ul className="space-y-2">
-          {project.outputs.map((output, idx) => (
-            <li key={idx} className="text-xs text-brand-text-dim flex gap-2 leading-relaxed">
-              <span className="text-brand-accent mt-1">•</span>
-              {output}
-            </li>
-          ))}
-        </ul>
       </div>
     )}
 
@@ -140,12 +137,10 @@ export default function App() {
               </p>
               <div className="flex flex-wrap gap-4">
                 <a 
-                  href="https://docs.google.com/presentation/d/1GkpuplYkwyG8wzE4twAhMzM7ZUcOt36Jle-_uFUiI_o/edit?usp=sharing" 
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#projects" 
                   className="px-6 py-3 bg-white text-black font-semibold rounded-full hover:bg-brand-accent hover:text-white transition-all duration-300 flex items-center gap-2"
                 >
-                  View Case Study <ChevronRight className="w-4 h-4" />
+                  View Projects <ChevronRight className="w-4 h-4" />
                 </a>
                 <div className="flex items-center gap-3 px-4">
                   <a href="https://www.linkedin.com/in/dikta-pradika-99187761/" className="p-2 text-brand-text-dim hover:text-white transition-colors" target="_blank" rel="noopener noreferrer"><Linkedin className="w-5 h-5" /></a>
